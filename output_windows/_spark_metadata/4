@@ -1,0 +1,5 @@
+v1
+{"path":"file:///workspaces/spark-patient-monitoring/output_windows/part-00000-b2a9f769-4a23-4bd5-9bde-0d973a24866d-c000.snappy.parquet","size":2107,"isDir":false,"modificationTime":1781480291223,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///workspaces/spark-patient-monitoring/output_windows/part-00001-9e91ca0d-a802-4bea-b203-d40517e429d1-c000.snappy.parquet","size":2062,"isDir":false,"modificationTime":1781480291095,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///workspaces/spark-patient-monitoring/output_windows/part-00002-26413a3b-ba90-4712-8b2a-7b91daa657b4-c000.snappy.parquet","size":2107,"isDir":false,"modificationTime":1781480292564,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///workspaces/spark-patient-monitoring/output_windows/part-00003-77880186-e695-44ec-9085-b72d992ddab7-c000.snappy.parquet","size":2197,"isDir":false,"modificationTime":1781480292888,"blockReplication":1,"blockSize":33554432,"action":"add"}

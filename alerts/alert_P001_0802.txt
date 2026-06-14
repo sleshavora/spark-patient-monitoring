@@ -1,0 +1,6 @@
+
+  🚨 CLINICAL ALERT 🚨
+  Patient   : P001
+  Window 1  : 2024-06-01 08:00:00 → avg HR 116.7 bpm
+  Window 2  : 2024-06-01 08:02:00 → avg HR 118.5 bpm
+  Both windows exceeded 100 bpm — notify clinical staff immediately!

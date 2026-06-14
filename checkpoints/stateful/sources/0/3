@@ -1,0 +1,3 @@
+v1
+{"path":"file:///workspaces/spark-patient-monitoring/input_stream/batch_0006.json","timestamp":1781479226177,"batchId":3}
+{"path":"file:///workspaces/spark-patient-monitoring/input_stream/batch_0007.json","timestamp":1781479226179,"batchId":3}

@@ -1,33 +1,19 @@
 """
 patient_monitor_stream.py
-─────────────────────────────────────────────────────────────────────────────
-ENGR 5785G – Real-Time Stream Processing Assignment
+ENGR 5785G - Real-Time Stream Processing Assignment
 Scenario B: Hospital Patient Monitoring
-─────────────────────────────────────────────────────────────────────────────
 
-Pipeline overview
-─────────────────
-1.  readStream  – watch ./input_stream/ for newline-delimited JSON files
-2.  withWatermark(2 min) – tolerate up to 2-min late data
-3.  Tumbling 2-minute window – aggregate average HR per patient per window
-4.  Self-join on consecutive windows (lag via state + flatMapGroupsWithState)
-5.  Alert – any patient with avg HR > 100 bpm in TWO consecutive windows
-            triggers a clinical alert written to the console and ./alerts/
+This script reads IoMT patient heart rate data as a stream,
+applies tumbling 2-minute windows to compute average HR per patient,
+and fires a clinical alert when a patient exceeds 100 bpm in two
+consecutive windows.
 
-Why Tumbling Windows?
-─────────────────────
-A tumbling window groups every non-overlapping fixed-length interval.
-For "sustained" abnormality we must confirm the condition holds across
-two back-to-back clinical observation periods, making tumbling windows
-ideal – each window is an independent, complete observation.
-
-Where State is Required
-───────────────────────
-The consecutive-window check is inherently stateful: after each 2-min
-window closes we must remember the previous window's average for each
-patient to compare with the current one.  We encode this in
-`flatMapGroupsWithState` with `GroupStateTimeout.EventTimeTimeout`.
+I chose tumbling windows because each window should be an independent
+observation period - same as how ICU nurses check vitals at fixed intervals.
+State is needed to remember each patient's previous window result so we
+can compare it with the current one across batch boundaries.
 """
+
 
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F

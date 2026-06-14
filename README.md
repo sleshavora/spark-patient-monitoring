@@ -195,4 +195,4 @@ window boundaries.
 ---
 
 ## Author
-Student Name — ENGR 5785G, Ontario Tech University
+Slesha Vora — ENGR 5785G, Ontario Tech University
